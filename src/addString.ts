@@ -3,7 +3,15 @@ export const add = (numbers: string): number => {
     return 0;
   }
 
-  const separator = ',';
+  let separator = ",";
+
+  if (numbers.startsWith("//")) {
+    const match = numbers.match(/^\/\/(.+)\n/);
+    if (match) {
+      separator = match[1]; // return new delimiter based on match
+      numbers = numbers.slice(match[0].length);
+    }
+  }
 
   const numberList: string[] = numbers.split(new RegExp(`[${separator}\n]`));
 

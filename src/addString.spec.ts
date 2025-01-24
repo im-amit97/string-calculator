@@ -16,4 +16,8 @@ describe("Add String Numbers", () => {
   it("should return sum with new lines", () => {
     expect(add("1\n2,3")).toBe(6);
   });
+
+  it('should return sum with different delimiter', () => {
+    expect(add("//;\n1;2")).toBe(3);
+  });
 });
