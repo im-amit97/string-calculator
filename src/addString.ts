@@ -15,5 +15,11 @@ export const add = (numbers: string): number => {
 
   const numberList: string[] = numbers.split(new RegExp(`[${separator}\n]`));
 
+  const filterNegatives = numberList.filter((number) => parseInt(number) < 0);
+
+  if (filterNegatives.length > 0) {
+    throw new Error("negative numbers not allowed " + filterNegatives.join(','));
+  }
+
   return numberList.reduce((prev, next) => prev + parseInt(next), 0);
 };
