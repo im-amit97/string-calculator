@@ -3,7 +3,9 @@ export const add = (numbers: string): number => {
     return 0;
   }
 
-  const numberList: string[] = numbers.split(",");
+  const separator = ',';
+
+  const numberList: string[] = numbers.split(new RegExp(`[${separator}\n]`));
 
   return numberList.reduce((prev, next) => prev + parseInt(next), 0);
 };
