@@ -21,5 +21,5 @@ export const add = (numbers: string): number => {
     throw new Error("negative numbers not allowed " + filterNegatives.join(','));
   }
 
-  return numberList.reduce((prev, next) => prev + parseInt(next), 0);
+  return numberList.reduce((prev, next) => prev + (parseInt(next) || 0), 0);
 };

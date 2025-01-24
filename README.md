@@ -4,7 +4,9 @@
 - Node Js
 - Typescript
 
-## Run Commands
+## How to start application
+
+    Modify the index.ts and test using below commands
     Build : npm run build
-    Run: npm start OR node dist/index.js
+    Run: npm start
     Test: npm test

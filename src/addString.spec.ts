@@ -5,6 +5,10 @@ describe("Add String Numbers", () => {
     expect(add("")).toBe(0);
   });
 
+  it('should return sum of remaining number if a string has other input', () => {
+    expect(add("A12, 12, 10")).toBe(22);
+  })
+
   it("should return sum of string numbers", () => {
     expect(add("10, 20, 30")).toBe(60);
   });
