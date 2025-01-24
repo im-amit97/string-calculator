@@ -3,5 +3,7 @@ export const add = (numbers: string): number => {
     return 0;
   }
 
-  return 0;
+  const numberList: string[] = numbers.split(",");
+
+  return numberList.reduce((prev, next) => prev + parseInt(next), 0);
 };
